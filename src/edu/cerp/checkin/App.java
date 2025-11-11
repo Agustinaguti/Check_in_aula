@@ -21,4 +21,25 @@ public class App {
             MainConsole.run(service);
         }
     }
+package edu.cerp.checkin;
+
+import edu.cerp.checkin.logic.SesionService;
+import edu.cerp.checkin.ui.CheckInGUI;
+
+public class App {
+
+    public static void main(String[] args) {
+
+        SesionService service = new SesionService();
+
+        // Si se ejecuta con el parámetro --gui, abre la interfaz gráfica
+        if (args.length > 0 && args[0].equalsIgnoreCase("--gui")) {
+            System.out.println("Ejecutando en modo gráfico...");
+            CheckInGUI.show(service);
+        } else {
+            System.out.println("Ejecutando en modo consola...");
+            // Código del modo consola
+            service.iniciar();
+        }
+    }
 }
