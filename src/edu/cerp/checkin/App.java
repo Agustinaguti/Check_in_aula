@@ -39,11 +39,7 @@ public class App {
         } else {
             System.out.println("Ejecutando en modo consola...");
             // Código del modo consola
-            service.iniciar();
-        }
-    }
-}
-public static void main(String[] args) {
+            service.public static void main(String[] args) {
     // Creamos el servicio principal del sistema
     edu.cerp.checkin.logic.SesionService service = new edu.cerp.checkin.logic.SesionService();
 
@@ -57,3 +53,4 @@ public static void main(String[] args) {
         service.iniciar();
     }
 }
+
